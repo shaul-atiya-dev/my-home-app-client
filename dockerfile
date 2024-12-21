@@ -15,4 +15,6 @@ FROM nginx:alpine
 EXPOSE 8080
 
 copy nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /app/dist/my-home-app/usr/share/nginx/html
+#COPY --from=build /app/dist/my-home-app/usr/share/nginx/html
+COPY --from=build /app/dist/my-home-app /usr/share/nginx/html
+
